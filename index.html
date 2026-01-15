@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Theme Colors based on your images */
+            --bg-color: #050505;
+            --primary-red: #ff2a2a; /* Vibrant red like the Fire Alarm/Vodka art */
+            --text-white: #f0f0f0;
+            --hover-black: #000000;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-white);
+            font-family: 'Roboto Mono', monospace; /* Tech/Industrial feel */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            
+            /* Subtle radial background to mimic the concentric circles in your art */
+            background-image: repeating-radial-gradient(
+                circle at 50% 50%,
+                #0a0a0a,
+                #0a0a0a 10px,
+                #0f0f0f 11px,
+                #0f0f0f 20px
+            );
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 40px 20px;
+            text-align: center;
+            z-index: 10; /* Keeps content above background pattern */
+        }
+
+        /* Profile Image (Optional) */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-red);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(255, 42, 42, 0.4);
+        }
+
+        /* Header Text */
+        h1 {
+            font-family: 'Anton', sans-serif; /* Matches the "THE HEIST" / "VODKA" font style */
+            font-size: 3.5rem;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px #330000;
+        }
+
+        p.bio {
+            color: #888;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* The Links */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-btn {
+            display: block;
+            text-decoration: none;
+            color: var(--primary-red);
+            background: transparent;
+            border: 2px solid var(--primary-red);
+            padding: 18px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Hover Effect: Fills with red, text turns black */
+        .link-btn:hover {
+            background-color: var(--primary-red);
+            color: var(--hover-black);
+            box-shadow: 0 0 20px rgba(255, 42, 42, 0.6);
+            transform: scale(1.02);
+        }
+
+        /* Specific styling for the 'Latest Release' to make it pop */
+        .link-btn.featured {
+            background-color: rgba(255, 42, 42, 0.1);
+            border-width: 3px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            font-size: 0.7rem;
+            color: #555;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5rem; }
+            .link-btn { padding: 15px; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="path/to/your-profile-pic.jpg" alt="Artist Profile" class="profile-img">
+
+        <h1>ARTIST NAME</h1>
+        <p class="bio">Timelapse. Music. Code.</p>
+
+        <div class="links-container">
+            <a href="#" class="link-btn featured">
+                Latest Release on Spotify
+            </a>
+
+            <a href="#" class="link-btn">
+                YouTube Channel
+            </a>
+
+            <a href="#" class="link-btn">
+                Instagram
+            </a>
+
+            <a href="#" class="link-btn">
+                TikTok
+            </a>
+            
+            <a href="mailto:your-email@example.com" class="link-btn">
+                Contact
+            </a>
+        </div>
+
+        <footer>
+            &copy; 2026 Artist Name. All Rights Reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
